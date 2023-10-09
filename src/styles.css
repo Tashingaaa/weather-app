@@ -1,0 +1,86 @@
+body {
+  background-color: rgb(245, 181, 220);
+}
+
+h1 {
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 70px;
+  position: fixed;
+  top: 0px;
+  right: 30px;
+}
+h2 {
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 40px;
+}
+.searchbar {
+  padding-top: 20px;
+}
+.sb-deco {
+  border-radius: 60px;
+  display: block;
+  margin: 5px;
+  padding: 10px 90px;
+  border: 1px solid gray;
+}
+.sbutton {
+  padding: 10px 30px;
+  border-radius: 60px;
+  border: 1px solid gray;
+  position: relative;
+  top: 50px;
+}
+.sbposition {
+  position: relative;
+
+  bottom: 101px;
+  left: 380px;
+}
+.day-time {
+  position: fixed;
+  right: 100px;
+  top: 90px;
+  font-size: 20px;
+  font-family: "Tenor Sans", sans-serif;
+  color: white;
+}
+.weather-description {
+  position: fixed;
+  right: 130px;
+  top: 110px;
+  font-size: 20px;
+  font-family: "Tenor Sans", sans-serif;
+  color: white;
+}
+.temperature {
+  font-size: 45px;
+  font-family: "Archivo Black", sans-serif;
+  color: white;
+}
+ul {
+  list-style: none;
+  padding-top: 25px;
+  left: 850px;
+  font-family: "Tenor Sans", sans-serif;
+  color: white;
+  line-height: 34px;
+}
+.col-dress-tips {
+  position: relative;
+  left: 900px;
+  bottom: 180px;
+  color: blue;
+}
+.mondayimg,
+.tusdayimg {
+  height: 160px;
+  border: 1px solid grey;
+  border-radius: 9px;
+}
+
+#celcius-link{
+  color: black;
+  text-decoration: underline;
+}
