@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Weather</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+     <link rel="stylesheet" href="src/styles.css">
+   
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@1,700&family=Tinos&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:wght@500&family=Roboto+Mono:ital,wght@1,700&family=Tinos&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:wght@700&family=Roboto+Mono:ital,wght@1,700&family=Tinos&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:wght@700&family=Cormorant+Upright:wght@700&family=Roboto+Mono:ital,wght@1,700&family=Tinos&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:wght@700&family=Cormorant+Upright:wght@700&family=Roboto+Mono:ital,wght@1,700&family=Tenor+Sans&family=Tinos&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <form class="searchbar" id="search-form">
+            <input type="text" class="sb-deco" placeholder="Enter your city name here" id="city-name-input" aria-describedby="emailHelp">
+          
+          <span class="sbposition">
+             <input type="button" class="sbutton" id="search-bar-button" value="Search">
+          </span>
+
+          <span class="sbposition">
+            <input type="button" class="sbutton" id="current-location-button" value="Current Location 📍">
+         </span>
+            
+
+        </form>
+        <h1>
+            TODAY
+        </h1>
+        <h2 id="city-name" >
+            
+        </h2>
+        <p class="day-time" id="date-time">
+           
+        </p>
+        <p class="weather-description" id="weather-description">
+            
+        </p>
+        <div class="temperature" id="current-temperature" >
+           
+        </div>
+        <ul>
+            <li>
+              
+            </li>
+            <li>
+                Humidity:
+                <span class="humidity" id="humid">
+                    
+                </span>
+            </li>
+            <li>
+                Wind:
+                <span class="wind" id="winds">
+                    
+                </span>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-dress-tips">
+               <div class="card" style="width: 20rem;">
+  <img src="images/sunweather.jpg" class="card-img-top" width="50px" alt="A sunny day">
+  <div class="card-body">
+    <p class="card-text">It's Sunny today! <br>
+        Throw on some shorts and slops. Don't forget to wear your sunscreen!
+    </p>
+  </div>
+</div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-saturday saturday">
+              <div class="card" style="width: 10rem;">
+  <img src="images/slightly cloudy.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">17°C <br> Partly Cloudy Saturday</p>
+  </div>
+</div>  
+            </div>
+              <div class="col col-sunday sunday">
+              <div class="card" style="width: 10rem;">
+  <img src="images/slightly cloudy.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">12°C <br>Partly Cloudy Sunday</p>
+  </div>
+</div>  
+            </div>
+              <div class="col col-monday monday">
+              <div class="card" style="width: 10rem;">
+  <img src="images/cloudy.jpg" class="mondayimg" alt="...">
+  <div class="card-body">
+    <p class="card-text">5°C <br> Shower <br>Monday</p>
+  </div>
+</div>  
+            </div>
+              <div class="col col-tuesday tuesday">
+              <div class="card" style="width: 10rem;">
+  <img src="images/sun.jpg" class="tusdayimg" alt="...">
+  <div class="card-body">
+    <p class="card-text">30° <br> Clear <br> Tuesday</p>
+  </div>
+</div>  
+            </div>
+              <div class="col col-wednesday wednesday">
+              <div class="card" style="width: 10rem;">
+  <img src="images/slightly cloudy.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">23° <br>Sunny Wednesday</p>
+  </div>
+</div>  
+ </div>
+              <div class=" col col-thursday thursday">
+              <div class="card" style="width: 10rem;">
+  <img src="images/slightly cloudy.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">18°C <br>Sunny <br> Thursday</p>
+  </div>
+</div>  
+        
+        </div>
+
+        <script src="src/index.js"></script>
+
+
+
+    </div>
+    
+</body>
+</html>
